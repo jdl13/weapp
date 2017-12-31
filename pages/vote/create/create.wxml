@@ -5,7 +5,7 @@
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell weui-cell_input">
         <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="投票标题" bindinput='bindVoteTitleInput'/>
+          <input class="weui-input" placeholder="投票标题" bindinput='bindVoteTitleInput' />
         </view>
       </view>
     </view>
@@ -14,7 +14,7 @@
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
         <view class="weui-cell__bd">
-          <textarea class="weui-textarea" placeholder="补充描述" style="height: 3.3em" bindinput='bindVoteDescriptionInput'/>
+          <textarea class="weui-textarea" placeholder="补充描述" style="height: 3.3em" bindinput='bindVoteDescriptionInput' />
           <view class="weui-textarea-counter">0/200</view>
         </view>
       </view>
@@ -34,6 +34,37 @@
       </radio-group>
       <view class="weui-cell weui-cell_link">
         <view class="weui-cell__bd" bindtap='bindAddVoteItemTap'>添加选项</view>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">日期</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="weui-input">{{date}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+          <view class="weui-input">{{time}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">开关</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">标题文字</view>
+        <view class="weui-cell__ft">
+          <switch checked />
+        </view>
       </view>
     </view>
 

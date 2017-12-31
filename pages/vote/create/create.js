@@ -14,7 +14,9 @@ Page({
       text: ""
     }, {
       text: ""
-    }]
+    }],
+    date: "2016-09-01",
+    time: "12:01",
   },
 
   bindRemoveVoteItemTap: function (e) {
