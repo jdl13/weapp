@@ -1,2 +1,47 @@
 <!--pages/vote/create/create.wxml-->
+<view class='page'>
+  <view class='page__bd'>
+    <view class="weui-cells__title">投票标题</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="投票标题" bindinput='bindVoteTitleInput'/>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">补充描述</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="补充描述" style="height: 3.3em" bindinput='bindVoteDescriptionInput'/>
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">投票项</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell" wx:for="{{voteItems}}" wx:key="value">
+          <icon type="cancel" size="23" bindtap='bindRemoveVoteItemTap' data-index='{{index}}'></icon>
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class="weui-input" placeholder="选项" value='{{item.text}}' data-index='{{index}}' bindinput='bindVoteItemInput' />
+            </view>
+          </view>
+        </label>
+      </radio-group>
+      <view class="weui-cell weui-cell_link">
+        <view class="weui-cell__bd" bindtap='bindAddVoteItemTap'>添加选项</view>
+      </view>
+    </view>
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="bindSubmitVoteTap">确定</button>
+    </view>
+  </view>
+
+</view>
+
 <text>pages/vote/create/create.wxml</text>

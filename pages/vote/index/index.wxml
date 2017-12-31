@@ -1,2 +1,12 @@
 <!--pages/vote/index/index.wxml-->
-<text>pages/vote/index/index.wxml</text>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+</view>
+<view class="page">
+  <view wx:for="{{voteType}}">
+    <view class="vote-item">
+      <image src='{{item.image}}'></image>
+      <button bindtap="bindButtonTap" class="weui-btn" type="primary" data-type='{{item.type}}'>{{item.name}}</button>
+    </view>
+  </view>
+</view>

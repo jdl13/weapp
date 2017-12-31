@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs",
     "pages/vote/index/index",
     "pages/vote/detail/detail",
-    "pages/vote/create/create"
+    "pages/vote/create/create",
+    "pages/index/index",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,7 +15,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/vote/index/index",
         "text": "首页"
       },
       {

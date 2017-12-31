@@ -1,2 +1,41 @@
 <!--pages/vote/detail/detail.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__hd">
+    <view class="page__title">{{voteInfo.title}}</view>
+    <view class="page__desc">{{voteInfo.description}}</view>
+  </view>
+
+  <block wx:if="{{voteInfo.type == 'radio'}}">
+    <view class="weui-cells__title">单选列表项</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{voteInfo.voteItems}}" wx:key="value">
+          <radio class="weui-check" value="{{index}}" checked="{{item.checked}}" />
+
+          <view class="weui-cell__bd">{{item.text}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+            <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="weui-cells__title">复选列表项</view>
+    <view class="weui-cells weui-cells_after-title">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="weui-cell weui-check__label" wx:for="{{voteInfo.voteItems}}" wx:key="value">
+          <checkbox class="weui-check" value="{{index}}" checked="{{item.checked}}" />
+
+          <view class="weui-cell__hd weui-check__hd_in-checkbox">
+            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+          </view>
+          <view class="weui-cell__bd">{{item.text}}</view>
+        </label>
+      </checkbox-group>
+    </view>
+  </block>
+</view>
+
 <text>pages/vote/detail/detail.wxml</text>
