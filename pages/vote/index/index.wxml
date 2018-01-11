@@ -4,8 +4,8 @@
 </view>
 <view class="page">
   <view wx:for="{{voteType}}">
-    <view class="vote-item">
-      <image src='{{item.image}}'></image>
+    <view class="vote-item " >
+      <image src='{{item.image}}' ></image>
       <button bindtap="bindButtonTap" class="weui-btn" type="primary" data-type='{{item.type}}'>{{item.name}}</button>
     </view>
   </view>

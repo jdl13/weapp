@@ -1,7 +1,11 @@
 /* pages/vote/index/index.wxss */
 
 .vote-item {
-  padding: 40rpx 40rpx;
+  padding: 100rpx 100rpx;
   margin-top: 30rpx;
   background-color: white;
+}
+
+image {
+  height: 180rpx;
 }

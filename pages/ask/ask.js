@@ -1,25 +1,11 @@
-// pages/vote/index/index.js
+// pages/ask/ask.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    voteType: [{
-      name: "单选投票",
-      image: "/images/danxuan.png",
-      type: "radio"
-    },{
-      name: "多选投票",
-      image: "/images/duoxuan.png",
-      type: "checkbox"
-    }]
-  },
-
-  bindButtonTap: function (e) {
-    wx.navigateTo({
-      url: '/pages/vote/create/create?type=' + e.currentTarget.dataset.type,
-    })
+  
   },
 
   /**

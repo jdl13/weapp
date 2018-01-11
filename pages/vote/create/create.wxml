@@ -63,7 +63,7 @@
       <view class="weui-cell weui-cell_switch">
         <view class="weui-cell__bd">标题文字</view>
         <view class="weui-cell__ft">
-          <switch checked />
+          <switch checked color='#25ADDA'/>
         </view>
       </view>
     </view>

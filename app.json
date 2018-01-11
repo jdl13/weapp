@@ -4,7 +4,8 @@
     "pages/vote/detail/detail",
     "pages/vote/create/create",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/ask/ask"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,11 +16,28 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/vote/index/index",
-        "text": "首页"
+        "selectedIconPath": "images/index.png",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index0.png",
+        "text": "choose"
+
       },
       {
+        "selectedIconPath": "images/vote.png",
+        "pagePath": "pages/vote/index/index",
+        "iconPath": "images/vote0.png",
+        "text": "投票"
+      },
+      {
+        "selectedIconPath": "images/ask.png",
+        "pagePath": "pages/ask/ask",
+        "iconPath": "images/ask0.png",
+        "text": "提问"
+      },
+      {
+        "selectedIconPath": "images/log.png",
         "pagePath": "pages/logs/logs",
+        "iconPath": "images/log0.png",
         "text": "日志"
       }
     ]
